@@ -1,5 +1,8 @@
 package br.com.ifpe.oxefood.modelo.cliente;
 
-public class ClienteRepository {
-    
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ClienteRepository extends JpaRepository<Cliente, Long> {
+
+  
 }
