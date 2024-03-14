@@ -79,8 +79,8 @@ public class Entregador extends EntidadeAuditavel  {
 //    "dataNascimento":"13/12/2001",
 //    "foneCelular":"81954545454",
 //    "foneFixo":"8154545454",
-//    "qtdEntregas":"2",
-//    "valorFrete":"3,50",
+//    "qtdEntregas": 2,
+//    "valorFrete": 3.50,
 //    "rua":"rua da esquina",
 //    "numero":"14",
 //    "bairro":"Centro",
@@ -88,5 +88,5 @@ public class Entregador extends EntidadeAuditavel  {
 //    "cep":"5411",
 //    "uf":"PE",
 //    "complemento":"funer",
-//    "ativo":"sim"
+//    "ativo":true
 }

@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "Entregador")
+@Table(name = "Produto")
 @SQLRestriction("habilitado = true")
 @Builder
 @Getter
@@ -32,7 +32,7 @@ public class Produto extends EntidadeAuditavel  {
    private String descricao;
 
    @Column
-   private int valorUnitario;
+   private double valorUnitario;
 
    @Column
    private int tempoEntrega;
@@ -42,9 +42,9 @@ public class Produto extends EntidadeAuditavel  {
 
 //    Para colocar no Postman
 //    "titulo": "Pao",
-//    "codigoProduto":"123",
+//    "codigoProduto":123,
 //    "descricao":"pao",
-//    "valorUnitario":"1",
-//    "tempoEntrega":"15",
-//    "tempoMaximo":"30",
+//    "valorUnitario":1,
+//    "tempoEntrega":15,
+//    "tempoMaximo":30
 }
