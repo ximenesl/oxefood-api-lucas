@@ -1,7 +1,7 @@
 package br.com.ifpe.oxefood.modelo.cliente;
 
 import jakarta.transaction.Transactional;
-
+import java.util.List;
 import java.time.LocalDate;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,5 +21,15 @@ public class ClienteService {
        cliente.setDataCriacao(LocalDate.now());
        return repository.save(cliente);
    }
+
+   public List<Cliente> listarTodos() {
+  
+        return repository.findAll();
+    }
+
+    public Cliente obterPorID(Long id) {
+
+        return repository.findById(id).get();
+    }
 
 }
