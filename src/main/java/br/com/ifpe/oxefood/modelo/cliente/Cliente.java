@@ -1,7 +1,9 @@
 package br.com.ifpe.oxefood.modelo.cliente;
 
 import java.time.LocalDate;
+
 import org.hibernate.annotations.SQLRestriction;
+
 import br.com.ifpe.oxefood.util.entity.EntidadeAuditavel;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -37,10 +39,12 @@ public class Cliente extends EntidadeAuditavel  {
    @Column
    private String foneFixo;
 
-//    Para colocar no Postman
-//    "nome": "Lucas",
-//    "dataNascimento":"13/12/2001",
-//    "cpf":"123.456.789-10",
-//    "foneCelular":"81954545454",
-//    "foneFixo":"8154545454"
+/* 
+   Para colocar no Postman
+   "nome": "Lucas",
+   "dataNascimento":"13/12/2001",
+   "cpf":"123.456.789-10",
+   "foneCelular":"81954545454",
+   "foneFixo":"8154545454"
+*/
 }

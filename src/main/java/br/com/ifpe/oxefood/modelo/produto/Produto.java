@@ -40,11 +40,13 @@ public class Produto extends EntidadeAuditavel  {
    @Column
    private int tempoMaximo;
 
-//    Para colocar no Postman
-//    "titulo": "Pao",
-//    "codigoProduto":123,
-//    "descricao":"pao",
-//    "valorUnitario":1,
-//    "tempoEntrega":15,
-//    "tempoMaximo":30
+/* 
+   Para colocar no Postman
+   "titulo": "Pao",
+   "codigoProduto":123,
+   "descricao":"pao",
+   "valorUnitario":1,
+   "tempoEntrega":15,
+   "tempoMaximo":30
+*/
 }

@@ -72,21 +72,23 @@ public class Entregador extends EntidadeAuditavel  {
    @Column
    private Boolean ativo;
 
-//    Para colocar no Postman
-//    "nome": "Heloisa",
-//    "cpf":"123.456.789-10",
-//    "rg":"123456",
-//    "dataNascimento":"13/12/2001",
-//    "foneCelular":"81954545454",
-//    "foneFixo":"8154545454",
-//    "qtdEntregas": 2,
-//    "valorFrete": 3.50,
-//    "rua":"rua da esquina",
-//    "numero":"14",
-//    "bairro":"Centro",
-//    "cidade":"jab",
-//    "cep":"5411",
-//    "uf":"PE",
-//    "complemento":"funer",
-//    "ativo":true
+/* 
+   Para colocar no Postman
+   "nome": "Heloisa",
+   "cpf":"123.456.789-10",
+   "rg":"123456",
+   "dataNascimento":"13/12/2001",
+   "foneCelular":"81954545454",
+   "foneFixo":"8154545454",
+   "qtdEntregas": 2,
+   "valorFrete": 3.50,
+   "rua":"rua da esquina",
+   "numero":"14",
+   "bairro":"Centro",
+   "cidade":"jab",
+   "cep":"5411",
+   "uf":"PE",
+   "complemento":"funer",
+   "ativo":true
+*/
 }
