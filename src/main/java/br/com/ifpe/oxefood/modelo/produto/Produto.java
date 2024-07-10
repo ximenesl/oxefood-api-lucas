@@ -1,7 +1,6 @@
 package br.com.ifpe.oxefood.modelo.produto;
 
 import org.hibernate.annotations.SQLRestriction;
-
 import br.com.ifpe.oxefood.util.entity.EntidadeAuditavel;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -15,18 +14,19 @@ import lombok.Setter;
 @Entity
 @Table(name = "Produto")
 @SQLRestriction("habilitado = true")
-@Builder
+@Builder        
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Produto extends EntidadeAuditavel  {
-    
+
+public class Produto extends EntidadeAuditavel {
+   
    @Column
-   private String titulo;
+   private String codigo;
 
    @Column
-   private int codigoProduto;
+   private String titulo;
 
    @Column
    private String descricao;
@@ -35,18 +35,9 @@ public class Produto extends EntidadeAuditavel  {
    private Double valorUnitario;
 
    @Column
-   private int tempoEntrega;
+   private Integer tempoEntregaMinimo;
 
    @Column
-   private int tempoMaximo;
+   private Integer tempoEntregaMaximo;
 
-/* 
-   Para colocar no Postman
-   "titulo": "Pao",
-   "codigoProduto":123,
-   "descricao":"pao",
-   "valorUnitario":1,
-   "tempoEntrega":15,
-   "tempoMaximo":30
-*/
 }
