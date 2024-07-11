@@ -1,6 +1,5 @@
 package br.com.ifpe.oxefood.api.produto;
 
-
 import br.com.ifpe.oxefood.modelo.produto.Produto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,29 +11,30 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ProdutoRequest {
+ private String codigo;
 
-    private String titulo;
+ private String titulo;
 
-    private int codigoProduto;
- 
-    private String descricao;
- 
-    private double valorUnitario;
- 
-    private int tempoEntrega;
- 
-    private int tempoMaximo;
+   
+ private String descricao;
+
+   
+ private Double valorUnitario;
+
+   
+ private Integer tempoEntregaMinimo;
+
+ private Integer tempoEntregaMaximo;
 
    public Produto build() {
 
        return Produto.builder()
+           .codigo(codigo)
            .titulo(titulo)
-           .codigoProduto(codigoProduto)
            .descricao(descricao)
            .valorUnitario(valorUnitario)
-           .tempoEntrega(tempoEntrega)
-           .tempoMaximo(tempoMaximo)
+           .tempoEntregaMinimo(tempoEntregaMinimo)
+	       .tempoEntregaMaximo(tempoEntregaMaximo)
            .build();
    }
-
 }
