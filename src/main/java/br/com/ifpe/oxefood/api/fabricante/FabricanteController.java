@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.ifpe.oxefood.modelo.fabricante.Fabricante;
 import br.com.ifpe.oxefood.modelo.fabricante.FabricanteService;
+import io.swagger.v3.oas.annotations.Operation;
 
 @RestController
 @RequestMapping("/api/fabricante")
@@ -26,6 +27,10 @@ public class FabricanteController {
    @Autowired
    private FabricanteService fabricanteService;
 
+    @Operation(
+    summary = "Serviço responsável por salvar um fabricante no sistema.",
+    description = "Exemplo de descrição de um endpoint responsável por inserir um entregador no sistema."
+   )
    @PostMapping
    public ResponseEntity<Fabricante> save(@RequestBody FabricanteRequest request) {
 
@@ -33,26 +38,42 @@ public class FabricanteController {
         return new ResponseEntity<Fabricante>(fabricante, HttpStatus.CREATED);
     }
 
+    @Operation(
+    summary = "Serviço responsável por salvar um fabricante no sistema.",
+    description = "Exemplo de descrição de um endpoint responsável por inserir um entregador no sistema."
+    )
    @GetMapping
    public List<Fabricante> listarTodos() {
 
        return fabricanteService.listarTodos();
    }
 
+   @Operation(
+    summary = "Serviço responsável por salvar um fabricante no sistema.",
+    description = "Exemplo de descrição de um endpoint responsável por inserir um entregador no sistema."
+    )
    @GetMapping("/{id}")
    public Fabricante obterPorID(@PathVariable Long id) {
 
        return fabricanteService.obterPorID(id);
    }
 
+   @Operation(
+    summary = "Serviço responsável por salvar um fabricante no sistema.",
+    description = "Exemplo de descrição de um endpoint responsável por inserir um entregador no sistema."
+    )
     @PutMapping("/{id}")
- public ResponseEntity<Fabricante> update(@PathVariable("id") Long id,
+    public ResponseEntity<Fabricante> update(@PathVariable("id") Long id,
     @RequestBody FabricanteRequest request) {
 
         fabricanteService.update(id, request.build());
        return ResponseEntity.ok().build();
     }
 
+    @Operation(
+    summary = "Serviço responsável por salvar um fabricante no sistema.",
+    description = "Exemplo de descrição de um endpoint responsável por inserir um entregador no sistema."
+    )
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
  

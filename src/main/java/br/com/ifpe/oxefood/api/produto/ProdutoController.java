@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.ifpe.oxefood.modelo.produto.Produto;
 import br.com.ifpe.oxefood.modelo.produto.ProdutoService;
+import io.swagger.v3.oas.annotations.Operation;
 
 @RestController
 @RequestMapping("/api/produto")
@@ -26,6 +27,10 @@ public class ProdutoController {
     @Autowired
     private ProdutoService produtoService;
 
+    @Operation(
+    summary = "Serviço responsável por salvar um produto no sistema.",
+    description = "Exemplo de descrição de um endpoint responsável por inserir um produto no sistema."
+    )
     @PostMapping
     public ResponseEntity<Produto> save(@RequestBody ProdutoRequest request) {
 
@@ -33,16 +38,28 @@ public class ProdutoController {
         return new ResponseEntity<Produto>(produto, HttpStatus.CREATED);
     }
 
+    @Operation(
+    summary = "Serviço responsável por salvar um produto no sistema.",
+    description = "Exemplo de descrição de um endpoint responsável por inserir um produto no sistema."
+    )
     @GetMapping
     public List<Produto> listarTodos() {
         return produtoService.listarTodos();
     }
 
+    @Operation(
+    summary = "Serviço responsável por salvar um produto no sistema.",
+    description = "Exemplo de descrição de um endpoint responsável por inserir um produto no sistema."
+    )
     @GetMapping("/{id}")
     public Produto obterPorID(@PathVariable Long id) {
         return produtoService.obterPorID(id);
     }
 
+    @Operation(
+    summary = "Serviço responsável por salvar um produto no sistema.",
+    description = "Exemplo de descrição de um endpoint responsável por inserir um produto no sistema."
+    )
     @PutMapping("/{id}")
     public ResponseEntity<Produto> update(@PathVariable("id") Long id, @RequestBody ProdutoRequest request) {
 
@@ -50,6 +67,10 @@ public class ProdutoController {
         return ResponseEntity.ok().build();
     }
 
+    @Operation(
+    summary = "Serviço responsável por salvar um produto no sistema.",
+    description = "Exemplo de descrição de um endpoint responsável por inserir um produto no sistema."
+    )
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id){
         produtoService.delete(id);
