@@ -27,10 +27,10 @@ public class ProdutoController {
     @Autowired
     private ProdutoService produtoService;
 
-    @Operation(
-    summary = "Serviço responsável por salvar um produto no sistema.",
-    description = "Exemplo de descrição de um endpoint responsável por inserir um produto no sistema."
-    )
+     @Operation(
+       summary = "Serviço responsável por salvar um produto no sistema.",
+       description = "Endpoint responsável por inserir um produto no sistema."
+   )
     @PostMapping
     public ResponseEntity<Produto> save(@RequestBody ProdutoRequest request) {
 
@@ -39,8 +39,8 @@ public class ProdutoController {
     }
 
     @Operation(
-    summary = "Serviço responsável por salvar um produto no sistema.",
-    description = "Exemplo de descrição de um endpoint responsável por inserir um produto no sistema."
+        summary = "Serviço responsável por listar todos os produtos no sistema.",
+        description = "Endpoint responsável por inserir um produto no sistema."
     )
     @GetMapping
     public List<Produto> listarTodos() {
@@ -48,17 +48,17 @@ public class ProdutoController {
     }
 
     @Operation(
-    summary = "Serviço responsável por salvar um produto no sistema.",
-    description = "Exemplo de descrição de um endpoint responsável por inserir um produto no sistema."
-    )
+       summary = "Serviço responsável por listar um produto pelo seu id no sistema.",
+       description = "Endpoint responsável por listar um produto no sistema pelo seu id."
+   )
     @GetMapping("/{id}")
     public Produto obterPorID(@PathVariable Long id) {
         return produtoService.obterPorID(id);
     }
 
     @Operation(
-    summary = "Serviço responsável por salvar um produto no sistema.",
-    description = "Exemplo de descrição de um endpoint responsável por inserir um produto no sistema."
+        summary = "Serviço responsável por atualizar um produto no sistema.",
+        description = "Endpoint responsável por atualizar um produto no sistema."
     )
     @PutMapping("/{id}")
     public ResponseEntity<Produto> update(@PathVariable("id") Long id, @RequestBody ProdutoRequest request) {
@@ -68,8 +68,8 @@ public class ProdutoController {
     }
 
     @Operation(
-    summary = "Serviço responsável por salvar um produto no sistema.",
-    description = "Exemplo de descrição de um endpoint responsável por inserir um produto no sistema."
+        summary = "Serviço responsável por deletar um produto no sistema.",
+        description = "Endpoint responsável por deletar um produto no sistema pelo seu id."
     )
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id){
